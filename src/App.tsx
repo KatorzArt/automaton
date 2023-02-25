@@ -1,5 +1,11 @@
+import { Settings } from "./components/Settings";
+
 function App() {
-  return <></>
+    return (
+        <>
+            <Settings />
+        </>
+    );
 }
 
-export default App
+export default App;
