@@ -1,12 +1,12 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 
-  font: inherit;
+    font: inherit;
 
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 a,
@@ -14,9 +14,9 @@ button,
 input,
 option,
 textarea {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 body {
-  font-family: sans-serif;
+    font-family: sans-serif;
 }
