@@ -1,4 +1,4 @@
-type InitializerFunction = (x?: unknown, i?: number) => boolean;
+export type InitializerFunction = (x?: unknown, i?: number) => boolean;
 
 export const Initializer: {
     [key: string]: InitializerFunction;
