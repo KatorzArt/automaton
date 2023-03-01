@@ -1,4 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
+import { Canvas } from "./components/Canvas";
+import { Rectangle } from "./components/Rectangle";
 import { Settings } from "./components/Settings";
 import { Accessor } from "./types/Accessor.type";
 import { Initializer } from "./types/Initializer.type";
@@ -25,6 +27,7 @@ function App() {
         setSimulation(createSimulation(width, height, Initializer.RANDOM));
     }, [width, height]);
 
+    const scale = 100;
     return (
         <>
             <Settings
@@ -37,6 +40,10 @@ function App() {
                 onNextGeneration={handleNextGeneration}
                 onToggleAutoGeneration={() => {}}
             />
+            <Canvas width={width} height={height} scale={scale}>
+                <Rectangle x={10} y={10} w={50} h={50} color="red" />
+                <Rectangle x={35} y={35} w={50} h={50} color="blue" />
+            </Canvas>
         </>
     );
 }
