@@ -20,7 +20,9 @@ export function simulate(
     access: AccessorFunction,
     rules: Rules
 ): Simulation {
-    const nullIndex = simulation.findIndex((gen) => gen === null);
+    const nullIndex = simulation.findIndex((gen) =>
+        gen?.some((cell) => cell === null)
+    );
     if (nullIndex < 0)
         return simulation.map((gen, i) =>
             i === simulation.length - 1

@@ -12,7 +12,7 @@ export type Rules = [
 ];
 
 export function createRulesFromNumber(num: number): Rules {
-    return Array.from(num.toString(2))
+    return Array.from(num.toString(2).padStart(8, "0"))
         .map((c) => c === "1")
         .reverse() as Rules;
 }
