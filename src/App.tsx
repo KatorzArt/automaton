@@ -41,8 +41,19 @@ function App() {
                 onToggleAutoGeneration={() => {}}
             />
             <Canvas width={width} height={height} scale={scale}>
-                <Rectangle x={10} y={10} w={50} h={50} color="red" />
-                <Rectangle x={35} y={35} w={50} h={50} color="blue" />
+                {simulation.map((generation, i) => {
+                    return generation?.map((cell, j) => {
+                        return (
+                            <Rectangle
+                                x={j * scale}
+                                y={i * scale}
+                                w={scale}
+                                h={scale}
+                                color={cell ? "white" : "black"}
+                            />
+                        );
+                    });
+                })}
             </Canvas>
         </>
     );
