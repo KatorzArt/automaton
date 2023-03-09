@@ -34,11 +34,11 @@ export function Settings({
     }
 
     return (
-        <div>
-            <div>
+        <div className="flex-col gap-500">
+            <div className="section">
                 <h2>Sizing</h2>
-                <div>
-                    <div>
+                <div className="flex gap-300">
+                    <div className="field-group">
                         <label>Width</label>
                         <input
                             type="number"
@@ -47,7 +47,7 @@ export function Settings({
                             onChange={handleChange(updateWidth)}
                         />
                     </div>
-                    <div>
+                    <div className="field-group">
                         <label>Height</label>
                         <input
                             type="number"
@@ -58,27 +58,38 @@ export function Settings({
                     </div>
                 </div>
             </div>
-            <div>
+            <div className="section">
                 <h2>Generation</h2>
-                <label>Rules</label>
-                <div>
-                    <input
-                        type="number"
-                        min="0"
-                        max="255"
-                        value={rules}
-                        onChange={handleChange(updateRules)}
-                    />
-                    <button type="button" onClick={setRandomRulesNum}>
-                        Random
-                    </button>
+                <div className="field-group">
+                    <label>Rules</label>
+                    <div className="flex gap-100">
+                        <input
+                            className="grow"
+                            type="number"
+                            min="0"
+                            max="255"
+                            value={rules}
+                            onChange={handleChange(updateRules)}
+                        />
+                        <button type="button" onClick={setRandomRulesNum}>
+                            Random
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div>
-                <button type="button" onClick={onNextGeneration}>
+            <div className="field-group flex gap-100">
+                <button
+                    className="grow"
+                    type="button"
+                    onClick={onNextGeneration}
+                >
                     Next generation
                 </button>
-                <button type="button" onClick={onToggleAutoGeneration}>
+                <button
+                    className="grow"
+                    type="button"
+                    onClick={onToggleAutoGeneration}
+                >
                     Toggle auto evolution
                 </button>
             </div>

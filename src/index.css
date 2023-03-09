@@ -18,5 +18,65 @@ textarea {
 }
 
 body {
+    background-color: #222;
+    color: #fff;
     font-family: sans-serif;
+}
+
+#root {
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+[class*="flex"] {
+    display: flex;
+    gap: 1rem;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.grow {
+    flex-grow: 1;
+}
+
+.gap-100 {
+    gap: 0.25rem;
+}
+
+.gap-300 {
+    gap: 0.5rem;
+}
+
+.gap-500 {
+    gap: 1rem;
+}
+
+.field-group > label {
+    display: block;
+}
+
+.field-group :is(input, button, textarea, select) {
+    padding: 0.5em 1em;
+
+    border: none;
+    border-radius: 0.5em;
+
+    font: inherit;
+    background-color: #444;
+    color: inherit;
+}
+
+.field-group label {
+    margin-block: 0.5rem 0.25rem;
+}
+
+.section {
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+
+    background-color: #333;
 }
